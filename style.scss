@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: auto;
+  padding: 0;
+  max-height: 896px;
+  max-width: 414px;
+}
+
+@font-face {
+  font-family: "plus Jakarta ";
+  src: url("./assests/fonts/PlusJakartaSans-ExtraLight.ttf") format("truetype");
+}
+
+body {
+  font-family: "plus Jakarta", sans-serif;
+}
+
+* * {
+  margin: 0;
+}
+
+$black1: #121212;
+$black2: #1d1d1d;
+$white: #ffffff;
+$grey1: #b3b3b3;
+$grey2: #bbbbba;
+$grey3: #474747;
+$grey4: #bababa;
+
+@import url("./src/styles/header.scss");
+@import url("./src/styles/player.scss");
+@import url("./src/styles/trackList.scss");

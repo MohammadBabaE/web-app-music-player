@@ -1,0 +1,148 @@
+$black1: #121212;
+$black2: #1d1d1d;
+$white: #ffffff;
+$grey1: #b3b3b3;
+$grey2: #bbbbba;
+$grey3: #474747;
+$grey4: #bababa;
+
+@mixin make-ellipsis {
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    overflow: hidden;
+  }
+
+#app {
+  & .player {
+    background-color: $black1;
+    height: 372px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .player-logo {
+      max-width: 342px;
+      max-height: 260px;
+    }
+
+    & .player-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      & .track-image {
+        width: 216px;
+        height: 216px;
+        border-radius: 12px;
+      }
+      & .track-name {
+        color: $white;
+        font-weight: 700;
+        font-size: 24px;
+        height: 30px;
+        margin-block-start: 12px;
+        width: 300px;
+        text-align: center;
+        @include make-ellipsis();
+      }
+      & .track-composer {
+        height: 19px;
+        font-weight: 800;
+        font-size: 15px;
+        color: $grey2;
+      }
+      & .track-audio {
+        display: none;
+      }
+      & .track-progress {
+        margin-top: 16px;
+        width: 366px;
+        -webkit-appearance: none;
+        appearance: none;
+        height: 4px;
+        outline: none;
+        border-radius: 2px;
+        background: $grey3;
+        &::-webkit-slider-runnable-track {
+          height: 4px;
+        }
+        &::-moz-range-track {
+          height: 4px;
+        }
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 11px;
+          height: 11px;
+          border-radius: 50%;
+          background: $white;
+          cursor: pointer;
+          margin-top: -3px;
+        }
+        &::-moz-range-thumb {
+          height: 11px;
+          width: 11px;
+          background-color: $white;
+          border: none;
+          cursor: pointer;
+          border-radius: 50%;
+        }
+      }
+      & .times {
+        margin-top: 6px;
+        height: 14px;
+        color: $grey4;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 800;
+        font-size: 11px;
+      }
+      & .buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        & .shuffle-button {
+          background: url("../../assests/icons/shuffle-off-button.svg");
+          width: 24px;
+          height: 24px;
+        }
+        & .is-shuffle {
+          background: url("../../assests/icons/shuffle-on-button.svg");
+        }
+        & .buttons-playback {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 152px;
+          & .previous-button {
+            background: url("../../assests/icons/previous-button.svg");
+            width: 24px;
+            height: 24px;
+          }
+          & .play-pause {
+            background: url("../../assests/icons/pause-button.svg");
+            width: 40px;
+            height: 40px;
+          }
+          & .is-pause {
+            background: url("../../assests/icons/play-button.svg");
+          }
+          & .next-button {
+            background: url("../../assests/icons/next-button.svg");
+            width: 24px;
+            height: 24px;
+          }
+        }
+        & .repeat-button {
+          background: url("../../assests/icons/repeat-off-button.svg");
+          width: 24px;
+          height: 24px;
+        }
+        & .is-repeat {
+          background: url("../../assests/icons/repeat-on-button.svg");
+        }
+      }
+    }
+  }
+}

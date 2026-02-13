@@ -1,0 +1,11 @@
+$black1: #121212;
+
+#app {
+  & .header {
+    height: 76px;
+    background-color: $black1;
+    background-image: url("./assests/icons/baletify-header.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
